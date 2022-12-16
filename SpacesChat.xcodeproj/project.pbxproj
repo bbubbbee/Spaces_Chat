@@ -13,6 +13,8 @@
 		F454FB82294AC77A00310C56 /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454FB81294AC77A00310C56 /* PhotoViewerViewController.swift */; };
 		F454FB84294AC7A900310C56 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454FB83294AC7A900310C56 /* VideoPlayerViewController.swift */; };
 		F454FB87294AC8CA00310C56 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454FB86294AC8CA00310C56 /* ProfileViewController.swift */; };
+		F454FB89294ACF5100310C56 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454FB88294ACF5100310C56 /* Extensions.swift */; };
+		F454FB8B294C105800310C56 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454FB8A294C105800310C56 /* DatabaseManager.swift */; };
 		F4BF74322949679D00871B55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BF74312949679D00871B55 /* AppDelegate.swift */; };
 		F4BF74342949679D00871B55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BF74332949679D00871B55 /* SceneDelegate.swift */; };
 		F4BF74362949679D00871B55 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BF74352949679D00871B55 /* LoginViewController.swift */; };
@@ -28,6 +30,8 @@
 		F454FB81294AC77A00310C56 /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
 		F454FB83294AC7A900310C56 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		F454FB86294AC8CA00310C56 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F454FB88294ACF5100310C56 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F454FB8A294C105800310C56 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		F4BF742E2949679D00871B55 /* SpacesChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpacesChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BF74312949679D00871B55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4BF74332949679D00871B55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 			children = (
 				F4BF74312949679D00871B55 /* AppDelegate.swift */,
 				F4BF74332949679D00871B55 /* SceneDelegate.swift */,
+				F454FB88294ACF5100310C56 /* Extensions.swift */,
+				F454FB8A294C105800310C56 /* DatabaseManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -213,10 +219,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4BF74362949679D00871B55 /* LoginViewController.swift in Sources */,
+				F454FB8B294C105800310C56 /* DatabaseManager.swift in Sources */,
 				F4BF74322949679D00871B55 /* AppDelegate.swift in Sources */,
 				F4BF74342949679D00871B55 /* SceneDelegate.swift in Sources */,
 				F454FB82294AC77A00310C56 /* PhotoViewerViewController.swift in Sources */,
 				F454FB80294AC76C00310C56 /* RegisterViewController.swift in Sources */,
+				F454FB89294ACF5100310C56 /* Extensions.swift in Sources */,
 				F454FB84294AC7A900310C56 /* VideoPlayerViewController.swift in Sources */,
 				F454FB87294AC8CA00310C56 /* ProfileViewController.swift in Sources */,
 				F454FB7E294AC75D00310C56 /* NewConversationViewController.swift in Sources */,
