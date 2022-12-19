@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
     
@@ -219,33 +220,33 @@ class RegisterViewController: UIViewController {
             return
         }
         
-        // Validates that email doesn't exist.
-//        DatabaseManager.shared.userExists(with: email, completion: { [weak self] exists in
-//            // Create strong self.
-//            guard let strongSelf = self else { return }
-//
-//            guard !exists else {
-//                // User already exists!
-//                self?.alertUserLoginError(message: "A user account with that email address already exists.")
-//                return
-//            }
-//
-//            // User doesn't exist.
-//            // Firebase: Register user.
-//            FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { authResult, error in
-//                // Checks if there is an authResult and no error.
-//                guard authResult != nil, error == nil else {
-//                    print("Error creating user")
-//                    return
-//                }
-//
-//                // Database: Register user.
-//                DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email))
-//
-//                // The user has registered, get off registration view.
-//                strongSelf.navigationController?.dismiss(animated: true, completion: nil)
-//            })//End - createUser.
-//        })//End - userExists.
+        // Checks if the email exists in the database.
+        DatabaseManager.shared.userExists(with: email, completion: { [weak self] exists in
+            // Create strong self.
+            guard let strongSelf = self else { return }
+
+            // User already exists! - cancel registration.
+            guard !exists else {
+                self?.alertUserLoginError(message: "A user account with that email address already exists.")
+                return
+            }
+
+            // User doesn't exist.
+            // Firebase: Register user.
+            FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { authResult, error in
+                // Checks if there is an authResult and no error.
+                guard authResult != nil, error == nil else {
+                    print("Error creating user")
+                    return
+                }
+
+                // Database: Register user.
+                DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email))
+
+                // The user has registered, get off registration view.
+                strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+            })//End - createUser.
+        })//End - userExists.
     }//End - didTapRegisterButton().
     
     /// Creates an alert for the user if an error occurs.
@@ -327,6 +328,7 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
         print(info)
         
         guard let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else { return }
+            // Edited image = allows you to crop the image. Original image is the full image. 
         self.imageView.image = selectedImage
     }
     

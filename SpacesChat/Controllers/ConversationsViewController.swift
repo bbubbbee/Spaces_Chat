@@ -6,21 +6,27 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ConversationsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .red
+        view.backgroundColor = .systemRed
     }
     
+    /// Notifies the view controller that its view was added to a view hierarchy.
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        let isLoggedIn = UserDefaults.standard.bool(forKey: "logged_in")
-        
-        if !isLoggedIn {
+        validateAuth()
+    }
+    
+    // MARK: - Actions
+    
+    /// Checks if the user is currently logged in. If not, go to login view.
+    private func validateAuth() {
+        if FirebaseAuth.Auth.auth().currentUser == nil {
             let vc = LoginViewController()
             let nav = UINavigationController(rootViewController: vc)
             nav.modalPresentationStyle = .fullScreen

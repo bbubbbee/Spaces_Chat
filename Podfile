@@ -7,4 +7,8 @@ target 'SpacesChat' do
 
   # Pods for SpacesChat
 
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+
 end
