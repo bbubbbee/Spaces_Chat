@@ -29,6 +29,7 @@
 		6703A27C1F651ABE6C2A7E0F /* Pods_SpacesChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpacesChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69AFEE249442F06F7871EC84 /* Pods-SpacesChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpacesChat.release.xcconfig"; path = "Target Support Files/Pods-SpacesChat/Pods-SpacesChat.release.xcconfig"; sourceTree = "<group>"; };
 		AFE46A05148A8CC7BA344755 /* Pods-SpacesChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpacesChat.debug.xcconfig"; path = "Target Support Files/Pods-SpacesChat/Pods-SpacesChat.debug.xcconfig"; sourceTree = "<group>"; };
+		F431B3AF2950056B0071F426 /* SpacesChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpacesChat.entitlements; sourceTree = "<group>"; };
 		F44AFA15294C21A40087E182 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F454FB7B294AC74800310C56 /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
 		F454FB7D294AC75D00310C56 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +164,7 @@
 		F4BF74302949679D00871B55 /* SpacesChat */ = {
 			isa = PBXGroup;
 			children = (
+				F431B3AF2950056B0071F426 /* SpacesChat.entitlements */,
 				F44AFA15294C21A40087E182 /* GoogleService-Info.plist */,
 				F454FB79294AC6B500310C56 /* Resources */,
 				F454FB78294AC6A500310C56 /* ViewModels */,
@@ -446,6 +448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SpacesChat/SpacesChat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 34RR9DC23K;
@@ -476,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SpacesChat/SpacesChat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 34RR9DC23K;

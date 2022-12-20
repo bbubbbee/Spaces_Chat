@@ -12,8 +12,6 @@ class ConversationsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .systemRed
     }
     
     /// Notifies the view controller that its view was added to a view hierarchy.
